@@ -17,11 +17,15 @@
     <bean id = "helloworld" class="main.com.maiev.HelloController">
     </bean>
 
-
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    <property name="prefix"
-              value="/WEB-INF/jsp/" />
-    <property name="suffix"
-              value=".jsp" />
+    <bean id = "greet" class="main.com.maiev.GreetController">
     </bean>
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <context:annotation-config />
+    <mvc:annotation-driven />
 </beans>

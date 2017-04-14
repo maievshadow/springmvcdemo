@@ -1,4 +1,4 @@
-package pojo;
+package com.maiev.pojo;
 
 /**
  * Created by maievshabu on 2017/4/11.

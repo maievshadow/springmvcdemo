@@ -1,10 +1,10 @@
-package main.com.maiev;
+package com.maiev.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import pojo.Hello;
+import com.maiev.pojo.Hello;
 
 import java.util.concurrent.atomic.AtomicLong;
 

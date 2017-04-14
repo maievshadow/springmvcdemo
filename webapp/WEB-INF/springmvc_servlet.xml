@@ -14,18 +14,15 @@
   http://www.springframework.org/schema/mvc
   http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
-    <bean id = "helloworld" class="main.com.maiev.HelloController">
-    </bean>
-
-    <bean id = "greet" class="main.com.maiev.GreetController">
-    </bean>
-
-
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!--自动扫描文件-->
+    <context:component-scan base-package="com.maiev.controller" />
+
+    <!--以下是返回json 的处理用的好像是jackson-->
     <context:annotation-config />
     <mvc:annotation-driven />
 </beans>

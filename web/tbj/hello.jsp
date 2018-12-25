@@ -10,3 +10,9 @@
          <%--pageEncoding="UTF-8" isELIgnored="false"%>--%>
 
 <h1>${hello}</h1>
+<br/>
+<h1>${user1.mobile}</h1>
+<br/>
+<h1>${user1.avatarUrl}</h1>
+<br/>
+<h1>${map.equipment}</h1>

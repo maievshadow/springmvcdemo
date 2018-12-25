@@ -19,3 +19,6 @@ and web.xml --->
         </init-param>
         
         ojbk~~~
+    jdbc.properties --BUG1
+    pom.xml --<build>
+    *Mapper.java -- @java 方式的SQL 写法问题

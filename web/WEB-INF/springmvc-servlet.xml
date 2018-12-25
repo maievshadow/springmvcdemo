@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
+>
+    <!--配置了组件扫描，就不需要配置<context:annotation-config> ，因为组件扫描已经包含了，
+    组件扫描，扫描的注解有@Controller，@Service，@Resposity，@Component，
+    @Controller注解必须由dispatherDispatcherServlet来扫描，
+    也实现了依赖注入，对
+    @Autowired，@Resource的支持
+    -->
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.maiev.demo.service"></context:component-scan>
+    <context:component-scan base-package="com.maiev.demo.dao"></context:component-scan>
+    <context:component-scan base-package="com.maiev.demo.controller"></context:component-scan>
+    <context:component-scan base-package="com.maiev.demo.pojo"></context:component-scan>
+
+    <!--开启基于注解的驱动-->
+    <context:annotation-config></context:annotation-config>
+    <!--开启mvc的注解驱动 ，可以使用@RequestParam注解,可以将请求参数帮到到控制器参数上-->
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+
+    </bean>
+</beans>
